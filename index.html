@@ -69,8 +69,8 @@
 	};
 	
 	console.log('after init');
-
-	if (!window.embedded_svc) {
+	document.addEventListener('DOMContentLoaded', (event) => {
+		if (!window.embedded_svc) {
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://reachfinancial--piyush.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
@@ -80,5 +80,7 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+	})
+	
 </script>
 </html>
