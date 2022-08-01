@@ -23,17 +23,29 @@
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 		embedded_svc.settings.defaultMinimizedText = 'Contact Us'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+		
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+		
+		console.log('before loading text');
+		
+		embedded_svc.settings.loadingText = 'Please wait, while we connect you.'; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'piyushb0509.github.io'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
+		
+		
 		//updating Height/Width and Font Size
 		//embedded_svc.settings.widgetHeight = '540px';
 		//embedded_svc.settings.widgetWidth = '360px';
 		//embedded_svc.settings.widgetFontSize = '12px';
 		
-		console.log('before loading text');
-		
-		embedded_svc.settings.loadingText = 'Please wait, while we connect you.'; //(Defaults to Loading)
-		embedded_svc.settings.storageDomain = 'piyushb0509.github.io'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
 		//console.log('before urls');
 		
 		//embedded_svc.settings.smallCompanyLogoImgURL = 'https://picsum.photos/36.png';
