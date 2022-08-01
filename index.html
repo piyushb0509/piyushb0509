@@ -25,18 +25,22 @@
 		embedded_svc.settings.defaultMinimizedText = 'Contact Us'; //(Defaults to Chat with an Expert)
 
 		//updating Height/Width and Font Size
-		embedded_svc.settings.widgetHeight = '540px';
-		embedded_svc.settings.widgetWidth = '360px';
-		embedded_svc.settings.widgetFontSize = '12px';
+		//embedded_svc.settings.widgetHeight = '540px';
+		//embedded_svc.settings.widgetWidth = '360px';
+		//embedded_svc.settings.widgetFontSize = '12px';
 		
+		console.log('before loading text');
 		
 		embedded_svc.settings.loadingText = 'Please wait, while we connect you.'; //(Defaults to Loading)
 		embedded_svc.settings.storageDomain = 'piyushb0509.github.io'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
+		console.log('before urls');
 		
 		embedded_svc.settings.smallCompanyLogoImgURL = 'https://picsum.photos/36.png';
 		embedded_svc.settings.avatarImgURL = 'https://picsum.photos/40.png';
 		embedded_svc.settings.chatbotAvatarImgURL  = 'https://picsum.photos/40.png';
+		
+		console.log('before extra pre chat form detais');
 		
  		embedded_svc.settings.extraPrechatFormDetails = [{
  			'label' : 'FirstName',
@@ -44,6 +48,8 @@
  			'transcriptFields' : [ 'FirstName__c' ],
  			'displayToAgent' : true
  		}];
+		
+		console.log('before init');
 
 		embedded_svc.init(
 			'https://reachfinancial--piyush.sandbox.my.salesforce.com',
@@ -61,6 +67,8 @@
 			}
 		);
 	};
+	
+	console.log('after init');
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
